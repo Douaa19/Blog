@@ -35,7 +35,8 @@ class Poste
 
     public function updatePoste($data)
     {
-        $this->database->query("UPDATE postes SET `titre_poste` = :titre, `contenu_poste` = :contenu WHERE id_poste = :id");
+        // $this->database->query("UPDATE postes SET `titre_poste` = :titre, `contenu_poste` = :contenu WHERE id_poste = :id");
+        $this->database->query("UPDATE `postes` SET `titre_poste`=:titre,`contenu_poste`=:contenu WHERE id_poste = :id");
         $this->database->bind(':id', $data['id']);
         $this->database->bind(':titre', $data['titre']);
         $this->database->bind(':contenu', $data['contenu']);
