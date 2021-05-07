@@ -1,0 +1,15 @@
+.container .card {
+    background-color: #E5E5E5;
+}
+
+.container form .card label {
+    font-size: 20px;
+}
+
+.container form .card textarea {
+    height: 12rem;
+}
+
+.container button {
+    background-color: black;
+}

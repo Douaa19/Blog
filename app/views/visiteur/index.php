@@ -17,14 +17,15 @@
 </head>
 <body>
     <div class="header">
-            <div class="m-auto bg-dark p-2 row">
+            <div class="m-auto p-2 row">
                 <h4 class="col-sm-1"></h4>
-                <h4 class="text-light col-sm-5 text-start" >Logo</h4>
-                <a href="#" class="text-light col-sm-5 text-end text-decoration-none p-1">Connexion</a>
+                <h4 class="text-light col-sm-7 text-start" >Logo</h4>
+                <a href="" class="text-light col-sm-1 text-center text-decoration-none p-1">Connexion</a>
+                <p class="col-1 text-light text-center pt-1">Fouad Laroui</p>
                 <h4 class="col-sm-1"></h4>
             </div>
     </div>
-    <div class="container mt-5">
+    <main class="container mt-5">
         <div class="row">
             <img src="./public/img/fouad-laraoui-portrait.jpg" alt="FL" class="col-6">
             <p class="col-5">Fouad Laroui est un économiste et écrivain marocain.
@@ -40,13 +41,32 @@
                 <div class="card-body row">
                     <h5 class="card-title col-6 text-start">Chapitre 1</h5>
                     <h6 class="card-title col-6 text-end">12/05/2021</h6>
-                    <p class="card-text col-10">C’est en 1970 que le ciel tombe sur la tête du petit Mehdi. Ébloui par l’intelligence et la boulimide    lecture de son jeune élève, son instituteur s’est battu pour lui obtenir une bourse dans le prestigieux lycéLyautey ... </p>
-                    <div class="modal-dialog modal-dialog-scrollable col-2 text-end">
-                        <a href="#"><img src="./public/img/down.png" alt="lire plus" style="width: 1rem; hieght: 1rem;"></a>
+                    <p class="card-text col-10">C’est en 1970 que le ciel tombe sur la tête du petit Mehdi. Ébloui par l’intelligence et la boulimide lecture de son jeune élève, son instituteur s’est battu pour lui obtenir une bourse dans le prestigieux lycéLyautey ... </p>
+                    <p class="col-3"></p>
+                    <button type="button" class="btn btn-dark col-6" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Lire plus
+                    </button>
+
+                    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"   aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel"><?php echo "Chapitre 1" ?></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <?php echo "Lire plus"; ?>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    <p class="col-3"></p>
                 </div>
             </div>
         </div>
-    </div>
+</main>
+<footer>
+    <div class="container-fluid bg-dark"></div>
+</footer>
 </body>
 </html>

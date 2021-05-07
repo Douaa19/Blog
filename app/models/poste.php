@@ -11,23 +11,60 @@ class Poste
 
     public function getPoste()
     {
-        echo "Select";
+        $this->database->query("SELECT * FROM postes");
+        $result = $this->database->resultSet();
+
+        return $result;
     }
 
     
-    public function addPoste()
+    public function addPoste($data)
     {
-        echo "Add";
+        $this->database->query("INSERT INTO `postes`(`titre_poste`, `contenu_poste`) VALUES (:titre, :contenu)");
+
+        $this->database->bind(':titre', $data['titre']);
+        $this->database->bind(':contenu', $data['contenu']);
+
+        if ($this->database->execute()) {
+            return true;
+        } else {
+           return false;
+        }
     }
 
 
-    public function updatePoste()
+    public function updatePoste($data)
     {
-        echo "Update";
+        $this->database->query("UPDATE postes SET `titre_poste` = :titre, `contenu_poste` = :contenu WHERE id_poste = :id");
+        $this->database->bind(':id', $data['id']);
+        $this->database->bind(':titre', $data['titre']);
+        $this->database->bind(':contenu', $data['contenu']);
+
+        if ($this->database->execute()) {
+            return true;
+        } else {
+           return false;
+        }
     }
 
-    public function deletePoste()
+    public function onePoste($data) 
     {
-        echo "Update";
+        $this->database->query("SELECT * FROM postes WHERE id_poste = :id");
+        $this->database->bind(':id', $data['id']);
+        $result = $this->database->single();
+
+        return $result;
+    }
+
+    public function deletePoste($data)
+    {   
+        $this->database->query("DELETE FROM `postes` WHERE id_poste = :id");
+        $this->database->bind(':id', $data['id']);
+
+        if ($this->database->execute()) {
+            return true;
+        } else {
+           return false;
+        }
     }
 }
