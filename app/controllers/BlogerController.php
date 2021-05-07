@@ -1,6 +1,6 @@
 <?php
 
-class UsersController extends Controller
+class BlogerController extends Controller
 {
 
 
@@ -20,7 +20,7 @@ class UsersController extends Controller
         $users = $this->userModel->getUsers();
 
 
-        $this->view('UsersController/index', $users);
+        $this->view('BlogerController/index', $users);
     }
 
 
@@ -33,7 +33,7 @@ class UsersController extends Controller
 
             //load the view (insert);
 
-            $this->view('users/insert');
+            $this->view('bloger/insert');
         } else {
 
 
@@ -46,7 +46,7 @@ class UsersController extends Controller
             ];
             $this->userModel->addUser($data);
 
-            header('location: ' . URLROOT . '/' . 'UsersController/index'); // au pire ila ghleti kat mchi l page par default
+            header('location: ' . URLROOT . '/' . 'BlogerController/index'); // au pire ila ghleti kat mchi l page par default
         }
     }
 }

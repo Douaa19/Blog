@@ -1,0 +1,13 @@
+.header {
+    background-image: url(../img/daktilo.jpg);
+    width: 1519px;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container .row .card {
+    background-color: #E5E5E5;
+}
+
