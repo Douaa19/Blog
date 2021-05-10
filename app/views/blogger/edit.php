@@ -5,7 +5,6 @@
         <div class="card p-5">
             <div class="mb-3">
               <label for="titre" class="form-label">Titre</label>
-              <input type="text" name="id" class="form-control" id="titre" value="<?php echo $data->id_poste; ?>">
               <input type="text" name="titre" class="form-control" id="titre" value="<?php echo $data->titre_poste; ?>">
             </div>
             <div class="mb-3">

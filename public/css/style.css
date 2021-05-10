@@ -1,4 +1,4 @@
-.header .m-auto {
+header .header .navbar {
     background-color: black;
 }
 
@@ -8,7 +8,11 @@
 
 footer {
     background-color: black;
+    display:flex; 
+    flex-wrap: wrap;
 }
+
+
 
 
 
