@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap files -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
-
-    <!-- My CSS -->
-    <title>Blog</title>
-</head>
-<body>
-    <div class="header">
-            <div class="m-auto p-2 row">
-                <h4 class="col-sm-1"></h4>
-                <h4 class="text-light col-sm-7 text-start" >Logo</h4>
-                <a href="" class="text-light col-sm-1 text-center text-decoration-none p-1">Connexion</a>
-                <p class="col-1 text-light text-center pt-1">Fouad Laroui</p>
-                <h4 class="col-sm-1"></h4>
-            </div>
-    </div>
+<?php include_once APPROOT . '../views/inc/header.php'; ?>
     <main class="container mt-5">
         <div class="row">
             <img src="./public/img/fouad-laraoui-portrait.jpg" alt="FL" class="col-6">
@@ -41,7 +15,7 @@
                 <div class="card-body row">
                     <h5 class="card-title col-6 text-start">Chapitre 1</h5>
                     <h6 class="card-title col-6 text-end">12/05/2021</h6>
-                    <p class="card-text col-10">C’est en 1970 que le ciel tombe sur la tête du petit Mehdi. Ébloui par l’intelligence et la boulimide lecture de son jeune élève, son instituteur s’est battu pour lui obtenir une bourse dans le prestigieux lycéLyautey ... </p>
+                    <p class="card-text col-10"><?php echo "LIMIT 15"; ?></p>
                     <p class="col-3"></p>
                     <button type="button" class="btn btn-dark col-6" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                   Lire plus

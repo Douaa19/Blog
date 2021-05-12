@@ -9,7 +9,7 @@ class PosteController extends Controller {
     public function index(){
         $postes = $this->posteModel->getPoste();
 
-        $this->view('blogger/accueil', $postes);
+        $this->view('blogger/index', $postes);
     }
 
 
@@ -33,7 +33,7 @@ class PosteController extends Controller {
 
           $this->posteModel->addPoste($data);
           // $this->view('blogger/accueil');
-          header('location:' . URLROOT . '/' . 'PosteController/index');
+          header('location:' . URLROOT . '/' . 'PosteController/accueilBlogger');
 
         } else {
           $this->view('blogger/add');
@@ -56,7 +56,7 @@ class PosteController extends Controller {
 
         $this->posteModel->updatePoste($data);
         // $this->view('blogger/accueil');
-        header('location:' . URLROOT . '/' . 'PosteController/index');
+        header('location:' . URLROOT . '/' . 'PosteController/accueilBlogger');
       }
     }
 
@@ -77,11 +77,9 @@ class PosteController extends Controller {
         'id' => $_GET['id']
       ];
       $this->posteModel->deletePoste($data);
-      header('location:' . URLROOT . '/' . 'PosteController/index');
+      header('location:' . URLROOT . '/' . 'PosteController/accueilBlogger');
       // $this->view('blogger/accueil');
     }
 
-    public function header() {
-      $this->view('inc/header');
-    }
+    
 }

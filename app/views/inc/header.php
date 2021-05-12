@@ -12,12 +12,13 @@
 </head>
 <body>
 <header>
-    <div class="header" style="background-image: url(./public/img/daktilo.jpg); width: 1519px; height: 750px; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+    <div class="header" style="background-image: url(../public/img/daktilo.jpg); width: 1519px; height: 750px; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
         <div class="navbar m-auto p-2 row" style="background-color:black;">
             <h4 class="col-sm-1"></h4>
-            <h4 class="text-light col-sm-8 text-start" >Logo</h4>
-            <a href="" class="col-1 text-decoration-none text-center pt-1 text-light">Accueil</a>
-            <p class="col-1 text-light text-center pt-1">Fouad Laroui</p>
+            <h4 class="text-light col-sm-7 text-start" >Logo</h4>
+            <a href="" class="col-1 text-decoration-none text-end text-light">Accueil</a>
+            <p class="col-1 text-light text-end pt-2 mt-2">Fouad Laroui</p>
+            <a href="<?php echo URLROOT; ?>/BloggerController/index" class="col-1 text-decoration-none text-light text-end">Connexion</a>
             <h4 class="col-sm-1"></h4>
         </div>
         <div class="container">

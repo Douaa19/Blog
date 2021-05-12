@@ -1,13 +1,14 @@
 <?php include_once APPROOT . '../views/inc/header.php'; ?>
 <main class="container mt-5">
     <div class="row">
-        <img src="<?php echo URLROOT; ?>/public/img/fouad-laraoui-portrait.jpg" alt="FL" class="col-6">
+        <img src="../public/img/fouad-laraoui-portrait.jpg" alt="FL" class="col-6">
         <p class="col-5">Fouad Laroui est un économiste et écrivain marocain.
         Après des études au Lycée Lyautey à Casablanca, il passe par l'Ecole Nationale des Ponts et Chaussées en France, dont il sort ingénieur. Après          avoir travaillé dans une usine de phosphates à Khouribga (Maroc), Il retourne en France et obtient un doctorat en sciences économiques. Il part         pour le Royaume-Uni, où il passe quelques années à Cambridge et à York et part vivre à Amsterdam où il enseigne l'économétrie puis les sciences de      l'environnement à l'Université. Parallèlement, il se consacre à l'écriture.
         Ses romans écrits en français connaissent un grand succès au Maroc pour sa façon de se moquer des blocages et aussi des pesanteurs de la société            marocaine. Il le fait avec humour et sans discours politique trop explicite."J’écris pour dénoncer des situations qui me choquent. Pour dénicher        la bêtise sous toutes ses formes. La méchanceté, la cruauté, le fanatisme, la sottise me révulsent". Identité, tolérance, respect de l’individu :           ce sont les trois valeurs qui l’intéressent parce que pour lui, « elles sont malmenées ou mal comprises dans nos pays du Maghreb et peut-être          aussi ailleurs en Afrique et dans les pays arabe ». Poète, il a composé en néerlandais un recueil qu'il juge "trop intime" pour être traduit en     français.</p>
     </div>
     <div class="row mt-5">
       <h2 class="col-10">Articles</h2>
+      <a href="<?php echo URLROOT; ?>/PosteController/return" class="col-2"><button type="button" class="btn btn-outline-primary">Ajouter <i class='fas fa-plus'></i></button></a>
     </div>
     <div class="row">
       <?php foreach ($data as $row) : ?>
@@ -36,8 +37,16 @@
                 </div>
                 <p class="col-3"></p>
             </div>
+            <div class="ms row">
+                <p class="col-1"></p>
+                <a href="<?php echo URLROOT; ?>/PosteController/unPoste?id=<?php echo $row->id_poste; ?>" class="btn btn-success col-4 text-center m-3">Modifier</a> 
+                <a href="<?php echo URLROOT; ?>/PosteController/delete?id=<?php echo $row->id_poste; ?>" class="btn btn-danger col-4 text-center m-3">Supprimer</a>
+                <p class="col-1"></p>
+            </div>
         </div>
       <?php endforeach; ?>
     </div>
 </main>
 <?php include_once APPROOT . '../views/inc/footer.php'; ?>
+
+
