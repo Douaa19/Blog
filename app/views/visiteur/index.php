@@ -1,7 +1,7 @@
 <?php include_once APPROOT . '../views/inc/header.php'; ?>
     <main class="container mt-5">
         <div class="row">
-            <img src="./public/img/fouad-laraoui-portrait.jpg" alt="FL" class="col-6">
+            <img src="../public/img/fouad-laraoui-portrait.jpg" alt="FL" class="col-6">
             <p class="col-5">Fouad Laroui est un économiste et écrivain marocain.
 
             Après des études au Lycée Lyautey à Casablanca, il passe par l'Ecole Nationale des Ponts et Chaussées en France, dont il sort ingénieur. Après          avoir travaillé dans une usine de phosphates à Khouribga (Maroc), Il retourne en France et obtient un doctorat en sciences économiques. Il part         pour le Royaume-Uni, où il passe quelques années à Cambridge et à York et part vivre à Amsterdam où il enseigne l'économétrie puis les sciences de      l'environnement à l'Université. Parallèlement, il se consacre à l'écriture.
@@ -10,11 +10,11 @@
         </div>
         <h2 class="mt-5">Articles</h2>
         <div class="row">
+          <?php foreach ($data as $row) : ?>
             <div class="card col-4 shadow p-3 mb-5 rounded" style="width: 25rem;">
                 <img src="./public/img/livre.gif" class="card-img-top mt-2" alt="Une année chez les français" style="height:28rem;">
                 <div class="card-body row">
-                    <h5 class="card-title col-6 text-start">Chapitre 1</h5>
-                    <h6 class="card-title col-6 text-end">12/05/2021</h6>
+                    <h5 class="card-title col-6 text-start"><?php echo $row->titre_poste; ?></h5>
                     <p class="card-text col-10"><?php echo "LIMIT 15"; ?></p>
                     <p class="col-3"></p>
                     <button type="button" class="btn btn-dark col-6" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -37,6 +37,7 @@
                     <p class="col-3"></p>
                 </div>
             </div>
+          <?php endforeach; ?>
         </div>
 </main>
 <footer>

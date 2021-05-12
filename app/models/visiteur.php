@@ -9,8 +9,11 @@ class Visiteur
         $this->database = new Database;
     }
 
-    public function return() {
-        echo "Hello from modet visiteur";
+    public function show() {
+        $this->database->query('SELECT * FROM postes');
+        $result = $this->resultSet();
+
+        return $result;
     }
 
 }

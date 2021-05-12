@@ -1,4 +1,4 @@
-<?php include_once APPROOT . '../views/inc/header.php'; ?>
+<?php include_once APPROOT . '../views/inc/header3.php'; ?>
 <main class="container mt-5">
     <div class="row">
         <img src="../public/img/fouad-laraoui-portrait.jpg" alt="FL" class="col-6">
@@ -8,18 +8,18 @@
     </div>
     <div class="row mt-5">
       <h2 class="col-10">Articles</h2>
-      <a href="<?php echo URLROOT; ?>/PosteController/return" class="col-2"><button type="button" class="btn btn-outline-primary">Ajouter <i class='fas fa-plus'></i></button></a>
+      <a href="<?php echo URLROOT; ?>/PosteController/add" class="col-2"><button type="button" name="ajouter" class="btn btn-outline-primary">Ajouter <i class='fas fa-plus'></i></button></a>
     </div>
     <div class="row">
       <?php foreach ($data as $row) : ?>
         <div class="card text-center shadow m-3 p-3 rounded" style="width: 25rem;">
-            <img src="./public/img/livre.gif" class="card-img-top mt-2" alt="Une année chez les français" style="height:28rem;">
+            <img src="../public/img/livre.gif" class="card-img-top mt-2" alt="Une année chez les français" style="height:28rem;">
             <div class="card-body row">
                 <h5 class="card-title col-8 text-start" style="font-size:18px;"><?php echo $row->titre_poste; ?></h5>
                 <h6 class="card-title col-4 text-end" style="font-size:15px;">12/05/2021</h6>
                 <p class="card-text col-10"><?php  ?></p>
                 <p class="col-3"></p>
-                <button type="button" name="" class="btn btn-dark col-6 mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <button type="button" name="plus" class="btn btn-dark col-6 mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                   Lire plus
                 </button>
                 <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

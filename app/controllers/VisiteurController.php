@@ -2,10 +2,12 @@
 
 class VisiteurController extends Controller {
     public function __construct() {
-        $this->bloggerModel = $this->model('Blogger');
+        $this->visiteurModel = $this->model('Visiteur');
     }
 
     public function index() {
-        $this->view('visiteur/index');
+        $show = $this->visiteurModel->show();
+
+        $this->view('visiteur/index', $data);
     }
 }

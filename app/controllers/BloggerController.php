@@ -33,8 +33,11 @@ class BloggerController extends Controller {
                 if (!$logged) {
                     $this->view('blogger/login');
                 } else {
-                    $this->view('blogger/accueilBlogger');
+                    header('Location: ' . URLROOT . '/' . 'PosteController/index');
                 }
+            } else {
+                // Inputs are empty
+                $this->view('blogger/login');
             }
 
         } else {
@@ -42,5 +45,26 @@ class BloggerController extends Controller {
             
         }
     }
+
+
+    // Session
+    public function creatSession($blogger) {
+        $_SESSION['id_blogger'] = $blogger->id;
+        $_SESSION['nom_blogger'] = $blogger->nom;
+        $_SESSION['email_blogger'] = $blogger->email;
+        $_SESSION['mdp_blogger'] = $blogger->mdp;
+        redirect('blogger/accueilBlogger');
+    }
+
+
+    public function logout(){
+        // unset($_SESSION['id_blogger']);
+        // unset($_SESSION['nom_blogger']);
+        // unset($_SESSION['email_blogger']);
+        // session_destroy();
+        echo "Vous êtes déconnectés";
+        redirect('visiteur/index');
+      }
+
 }
 

@@ -21,13 +21,4 @@ class Blogger {
         
     }
 
-    // Session
-    public function creatSession($blogger) {
-        $_SESSION['id_blogger'] = $blogger->id;
-        $_SESSION['nom_blogger'] = $blogger->nom;
-        $_SESSION['email_blogger'] = $blogger->email;
-        $_SESSION['mdp_blogger'] = $blogger->mdp;
-    }
-
-
 }

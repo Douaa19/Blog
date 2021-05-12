@@ -12,7 +12,7 @@
     <div class="row">
       <?php foreach ($data as $row) : ?>
         <div class="card text-center shadow m-3 p-3 rounded" style="width: 25rem;">
-            <img src="./public/img/livre.gif" class="card-img-top mt-2" alt="Une année chez les français" style="height:28rem;">
+            <img src="../public/img/livre.gif" class="card-img-top mt-2" alt="Une année chez les français" style="height:28rem;">
             <div class="card-body row">
                 <h5 class="card-title col-8 text-start" style="font-size:18px;"><?php echo $row->titre_poste; ?></h5>
                 <h6 class="card-title col-4 text-end" style="font-size:15px;">12/05/2021</h6>

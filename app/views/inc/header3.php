@@ -18,7 +18,7 @@
             <h4 class="text-light col-sm-7 text-start" >Logo</h4>
             <a href="" class="col-1 text-decoration-none text-end text-light">Accueil</a>
             <p class="col-1 text-light text-end pt-2 mt-2">Fouad Laroui</p>
-            <a href="<?php echo URLROOT; ?>/BloggerController/index" class="col-1 text-decoration-none text-light text-end">Connecter</a>
+            <a href="<?php echo URLROOT; ?>/BloggerController/logout" class="col-1 text-decoration-none text-light text-end">Déconnecter</a>
             <h4 class="col-sm-1"></h4>
         </div>
         <div class="container">
@@ -26,9 +26,8 @@
                 <p class="col-6" style="position: absolute; top: 50%; left:10%; font-size:3rem; text-transform: uppercase; font-family:'Courier New', Courier, monospace; color: #EDE3A1;
 	            background-image: -webkit-linear-gradient(180deg, #EDE3A1, #E7E3CE);
 	            -webkit-background-clip: text;
-	            -webkit-text-fill-color: transparent;">bienvenue chers lecteurs</p>
+	            -webkit-text-fill-color: transparent;">bienvenue cher écrivain</p>
             </div>
         </div>
     </div>
 </header>
-
