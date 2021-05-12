@@ -5,7 +5,7 @@
    * URL FORMAT - /controller/method/params
    */
   class Core {
-    protected $currentController = 'BloggerController';
+    protected $currentController = 'VisiteurController';
     protected $currentMethod = 'index';
     protected $params = [];
 
