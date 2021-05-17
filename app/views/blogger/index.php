@@ -18,7 +18,7 @@
                 <h6 class="card-title col-4 text-end" style="font-size:15px;">12/05/2021</h6>
                 <p class="card-text col-10"><?php  ?></p>
                 <p class="col-3"></p>
-                <button type="button" name="" class="btn btn-dark col-6 mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <button type="button" name="plus" class="btn btn-dark col-6 mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                   Lire plus
                 </button>
                 <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

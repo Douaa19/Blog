@@ -63,7 +63,7 @@ class BloggerController extends Controller {
         // unset($_SESSION['email_blogger']);
         // session_destroy();
         echo "Vous êtes déconnectés";
-        redirect('visiteur/index');
+        header('Location: ' . URLROOT . '/' . 'VisiteurController/index');
       }
 
 }
