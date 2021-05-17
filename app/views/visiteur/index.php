@@ -11,7 +11,7 @@
         <h2 class="mt-5">Articles</h2>
         <div class="row">
           <?php foreach ($data as $row) : ?>
-            <div class="card col-4 shadow p-3 mb-5 rounded" style="width: 25rem;">
+            <div class="card text-start shadow m-3 p-3 rounded" style="width: 25rem;">
                 <img src="../public/img/livre.gif" class="card-img-top mt-2" alt="Une année chez les français" style="height:28rem;">
                 <div class="card-body row">
                     <h5 class="card-title col-6 text-start"><?php echo $row->titre_poste; ?></h5>
@@ -22,7 +22,7 @@
                     </button>
 
                     <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"   aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-scrollable">
+                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                           <div class="modal-header">
                             <h5 class="modal-title" id="staticBackdropLabel"><?php echo "Chapitre 1" ?></h5>
