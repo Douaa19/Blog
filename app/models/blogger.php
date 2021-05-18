@@ -21,4 +21,17 @@ class Blogger {
         
     }
 
+
+    public function search($data) {
+        $this->database->query('SELECT * FROM postes WHERE titre_poste = :titre ');
+        $this->database->bind(':titre', $data['search']);
+
+        $result = $this->database->resultSet();
+
+        if (!$result) {
+            return false;
+        } else {
+            return $result;
+        }
+    }
 }

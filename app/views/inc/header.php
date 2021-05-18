@@ -20,7 +20,7 @@
             <a href="<?php echo URLROOT; ?>/BloggerController/index" class="col-1 text-decoration-none text-light text-end">Connecter</a>
             <form action="<?php echo URLROOT; ?>/VisiteurController/search" method="POST" class="col-3">
                 <input type="text" name="search" id="search" placeholder="Recherche" style="border-radius:5px; padding-left:1rem; outline:none;">
-                <input type="submit" value="Recherche" class="bg-light text-dark text-center" style="border-radius:5px; outline:none;">
+                <input type="submit" name="submit_search" value="Recherche" class="bg-light text-dark text-center" style="border-radius:5px; outline:none;">
             </form>
         </div>
         <div class="container">

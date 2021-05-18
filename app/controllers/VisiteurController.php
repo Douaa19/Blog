@@ -19,17 +19,18 @@ class VisiteurController extends Controller {
     }
 
     public function search() {
-        if (isset($_POST['search'])) {
+        if (isset($_POST['submit_search'])) {
             $data = [
                 'search' => $_POST['search']
             ];
+
             $result = $this->visiteurModel->search($data);
 
             if ($result) {
-                // header('Location: ' . URLROOT . '/' . 'VisiteurController/result');
                 $this->view('visiteur/result', $result);
             }else {
-                echo "La partie cherché n'exixte pas";
+                // header('Location: ' . URLROOT . '/' . 'VisiteurController/index');
+                echo "Not found";
             }
 
             
