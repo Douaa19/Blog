@@ -9,7 +9,7 @@
             </div>
             <div class="mb-3">
               <label for="texte" class="form-label">Texte</label>
-              <textarea name="contenu" class="form-control" id="texte" value="<?php echo $data->contenu_poste; ?>"></textarea>
+              <input type="textarea" name="contenu" class="form-control" id="texte" value="<?php echo $data->contenu_poste; ?>"></textarea>
             </div>
         </div>
         <p class="col-5"></p>
@@ -18,4 +18,5 @@
     </form>
 </div>
 </div>
+<?php var_dump($data); ?>
 <?php require APPROOT . '/views/inc/footer.php'; ?>

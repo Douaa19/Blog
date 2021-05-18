@@ -17,7 +17,7 @@ class Visiteur
     }
 
     public function search($data) {
-        $this->database->query('SELECT * FROM postes WHERE titre_poste = :titre ');
+        $this->database->query("SELECT * FROM postes WHERE `titre_poste` = :titre ");
         $this->database->bind(':titre', $data['search']);
 
         $result = $this->database->resultSet();

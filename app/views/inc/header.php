@@ -16,11 +16,11 @@
         <div class="navbar m-auto p-2 row" style="background-color:black;">
             <h4 class="col-sm-1"></h4>
             <h4 class="text-light col-sm-6 text-start" >Logo</h4>
-            <a href="" class="col-1 text-decoration-none text-end text-light">Accueil</a>
+            <a href="<?php echo URLROOT ?>/VisiteurController/index" class="col-1 text-decoration-none text-end text-light">Accueil</a>
             <a href="<?php echo URLROOT; ?>/BloggerController/index" class="col-1 text-decoration-none text-light text-end">Connecter</a>
             <form action="<?php echo URLROOT; ?>/VisiteurController/search" method="POST" class="col-3">
                 <input type="text" name="search" id="search" placeholder="Recherche" style="border-radius:5px; padding-left:1rem; outline:none;">
-                <input type="submit" value="Recherche" class="bg-light text-dark text-center" style="border-radius:5px; outline:none;">
+                <input type="submit" name="submit_search" value="Recherche" class="bg-light text-dark text-center" style="border-radius:5px; outline:none;">
             </form>
         </div>
         <div class="container">

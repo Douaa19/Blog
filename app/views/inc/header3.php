@@ -15,11 +15,15 @@
     <div class="header" style="background-image: url(../public/img/daktilo.jpg); width: 1519px; height: 750px; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
         <div class="navbar m-auto p-2 row" style="background-color:black;">
             <h4 class="col-sm-1"></h4>
-            <h4 class="text-light col-sm-7 text-start" >Logo</h4>
-            <a href="" class="col-1 text-decoration-none text-end text-light">Accueil</a>
+            <h4 class="text-light col-sm-5 text-start" >Logo</h4>
+            <a href="<?php echo URLROOT ?>/PosteController/index" class="col-1 text-decoration-none text-end text-light">Accueil</a>
             <p class="col-1 text-light text-end pt-2 mt-2">Fouad Laroui</p>
             <a href="<?php echo URLROOT; ?>/BloggerController/logout" class="col-1 text-decoration-none text-light text-end">Déconnecter</a>
-            <h4 class="col-sm-1"></h4>
+            <form action="<?php echo URLROOT; ?>/BloggerController/search" method="POST" class="col-3">
+                <input type="text" name="search" id="search" placeholder="Recherche" style="border-radius:5px; padding-left:1rem; outline:none;">
+                <input type="submit" value="Recherche" class="bg-light text-dark text-center" style="border-radius:5px; outline:none;">
+            </form>
+            <!-- <h4 class="col-sm-1"></h4> -->
         </div>
         <div class="container">
             <div class="paragraphe row">

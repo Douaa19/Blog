@@ -66,5 +66,22 @@ class BloggerController extends Controller {
         header('Location: ' . URLROOT . '/' . 'VisiteurController/index');
       }
 
+    public function search() {
+        if (isset($_POST['search'])) {
+            $data = [
+                'search' => $_POST['search']
+            ];
+            $result = $this->bloggerModel->search($data);
+
+            if ($result) {
+                $this->view('blogger/result', $result);
+            }else {
+                echo "La partie cherché n'exixte pas";
+            }
+
+            
+        }
+    }
+
 }
 
