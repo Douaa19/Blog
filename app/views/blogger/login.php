@@ -1,4 +1,14 @@
 <?php include_once APPROOT . '../views/inc/header2.php'; ?>
+<?php session_start(); 
+
+  if (isset($_SESSION['nom'])) {
+    header('Location:' . URLROOT . '/' . 'PosteController/index');
+  }
+
+
+
+
+?>
 <div class="container row mt-5" style="dispaly:flex; flex-wrap: wrap;">
     <div class="col-2"></div>
     <div class="image col-5">
