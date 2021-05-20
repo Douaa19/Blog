@@ -10,10 +10,11 @@
         <div class="mb-3">
           <label for="titre" class="form-label mb-3" style="color:white;">Email</label>
           <input type="email" name="email" class="form-control" id="email" placeholder="Entre votre email">
+          <!-- <small>Message d'erreur</small> -->
         </div>
         <div class="mb-3">
           <label for="mdp" class="form-label mb-3"  style="color:white;">Mot de passe</label>
-          <input type="password" name="mdp" class="form-control" id="mdp" placeholder="Entre votre mot de passe">
+          <input type="password" name="mdp" class="form-control" id="mdp" placeholder="Sésies votre mot de passe">
         </div>
         <div class="button d-flex justify-content-center mt-4">
             <button type="submit" name="submit-login" class="btn mt-3 col-2" style="background-color: white; color:black;">Entrer</button>

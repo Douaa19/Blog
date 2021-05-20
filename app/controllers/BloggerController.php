@@ -13,9 +13,6 @@ class BloggerController extends Controller {
 
         $this->view('blogger/login');
 
-        // $blogger = $this->bloggerModel->getBlogger($data);
-
-        // $this->view('blogger/login', $blogger);
     }
 
 
@@ -33,6 +30,7 @@ class BloggerController extends Controller {
                 if (!$logged) {
                     $this->view('blogger/login');
                 } else {
+                    $this->creatSession($logged);
                     header('Location: ' . URLROOT . '/' . 'PosteController/index');
                 }
             } else {
@@ -42,18 +40,17 @@ class BloggerController extends Controller {
 
         } else {
                 $this->view('blogger/login');
-            
         }
     }
 
 
     // Session
     public function creatSession($blogger) {
-        $_SESSION['id_blogger'] = $blogger->id;
-        $_SESSION['nom_blogger'] = $blogger->nom;
-        $_SESSION['email_blogger'] = $blogger->email;
-        $_SESSION['mdp_blogger'] = $blogger->mdp;
-        redirect('blogger/accueilBlogger');
+
+        $_SESSION['id'] = $blogger->id_blogger;
+        $_SESSION['nom'] = $blogger->nom_blogger;
+        $_SESSION['email'] = $blogger->email_blogger;
+        $_SESSION['mdp'] = $blogger->mdp_blogger;
     }
 
 

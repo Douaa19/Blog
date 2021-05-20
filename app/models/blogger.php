@@ -16,7 +16,7 @@ class Blogger {
         if (!$result) {
             return false;
         } else {
-            return true;
+            return $result;
         }
         
     }
