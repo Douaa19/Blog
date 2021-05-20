@@ -20,24 +20,23 @@ class BloggerController extends Controller {
 
         if (isset($_POST['submit-login'])) {
             if (!empty($_POST['email']) && !empty($_POST['mdp'])) {
-                
                 $data = [
                     'email' => trim($_POST['email']),
                     'mdp' => trim($_POST['mdp'])
                 ];
-                
                 $logged = $this->bloggerModel->login($data);
                 if (!$logged) {
                     $this->view('blogger/login');
                 } else {
                     $this->creatSession($logged);
-                    header('Location: ' . URLROOT . '/' . 'PosteController/index');
+
+                    header('Location:' . URLROOT . '/' . 'PosteController/index');
+
                 }
             } else {
                 // Inputs are empty
                 $this->view('blogger/login');
             }
-
         } else {
                 $this->view('blogger/login');
         }
@@ -46,6 +45,8 @@ class BloggerController extends Controller {
 
     // Session
     public function creatSession($blogger) {
+
+        session_start();
 
         $_SESSION['id'] = $blogger->id_blogger;
         $_SESSION['nom'] = $blogger->nom_blogger;

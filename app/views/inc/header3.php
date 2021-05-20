@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +21,7 @@
             <h4 class="col-sm-1"></h4>
             <h4 class="text-light col-sm-5 text-start" >Logo</h4>
             <a href="<?php echo URLROOT ?>/PosteController/index" class="col-1 text-decoration-none text-end text-light">Accueil</a>
-            <p class="col-1 text-light text-end pt-2 mt-2">Fouad Laroui</p>
+            <p class="col-1 text-light text-end pt-2 mt-2"><?php echo $_SESSION['nom']; ?> </p>
             <a href="<?php echo URLROOT; ?>/BloggerController/logout" class="col-1 text-decoration-none text-light text-end">Déconnecter</a>
             <form action="<?php echo URLROOT; ?>/BloggerController/search" method="POST" class="col-3">
                 <input type="text" name="search" id="search" placeholder="Recherche" style="border-radius:5px; padding-left:1rem; outline:none;">
