@@ -13,16 +13,6 @@ class PosteController extends Controller {
     }
 
 
-    // Retourner à la page d'ajoute
-    // public function return() {
-    //   if (isset($_POST['ajouter'])) {
-    //     echo "Ajouter isset";
-    //   } else {
-    //     echo "Ajouter not isset";
-    //   }
-    //   // $this->view('blogger/add');
-    // }
-
 
     // Ajouter un poste
     public function add() {

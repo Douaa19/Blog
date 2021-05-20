@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    
+    if (isset($_SESSION['nom'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,3 +39,8 @@
         </div>
     </div>
 </header>
+
+<?php } else {
+    header('Location: ' . URLROOT . '/' . 'VisiteurController/index');
+}
+?>

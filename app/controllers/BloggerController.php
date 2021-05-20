@@ -13,6 +13,9 @@ class BloggerController extends Controller {
 
         $this->view('blogger/login');
 
+        // $blogger = $this->bloggerModel->getBlogger($data);
+
+        // $this->view('blogger/login', $blogger);
     }
 
 
@@ -29,9 +32,7 @@ class BloggerController extends Controller {
                     $this->view('blogger/login');
                 } else {
                     $this->creatSession($logged);
-
                     header('Location:' . URLROOT . '/' . 'PosteController/index');
-
                 }
             } else {
                 // Inputs are empty
@@ -45,9 +46,7 @@ class BloggerController extends Controller {
 
     // Session
     public function creatSession($blogger) {
-
         session_start();
-
         $_SESSION['id'] = $blogger->id_blogger;
         $_SESSION['nom'] = $blogger->nom_blogger;
         $_SESSION['email'] = $blogger->email_blogger;
@@ -56,13 +55,11 @@ class BloggerController extends Controller {
 
 
     public function logout(){
-        // unset($_SESSION['id_blogger']);
-        // unset($_SESSION['nom_blogger']);
-        // unset($_SESSION['email_blogger']);
-        // session_destroy();
-        echo "Vous êtes déconnectés";
+        session_start();
+        unset($_SESSION['nom']);
         header('Location: ' . URLROOT . '/' . 'VisiteurController/index');
       }
+
 
     public function search() {
         if (isset($_POST['search'])) {
@@ -76,8 +73,6 @@ class BloggerController extends Controller {
             }else {
                 echo "La partie cherché n'exixte pas";
             }
-
-            
         }
     }
 
