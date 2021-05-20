@@ -15,22 +15,23 @@
     <div class="header" style="background-image: url(../public/img/daktilo.jpg); width: 1519px; height: 750px; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
         <div class="navbar m-auto p-2 row" style="background-color:black;">
             <h4 class="col-sm-1"></h4>
-            <h4 class="text-light col-sm-6 text-start" >Logo</h4>
-            <a href="<?php echo URLROOT ?>/VisiteurController/index" class="col-1 text-decoration-none text-end text-light">Accueil</a>
-            <a href="<?php echo URLROOT; ?>/BloggerController/index" class="col-1 text-decoration-none text-light text-end">Connecter</a>
-            <form action="<?php echo URLROOT; ?>/VisiteurController/search" method="POST" class="col-3">
+            <h4 class="text-light col-sm-5 text-start" >Logo</h4>
+            <a href="<?php echo URLROOT ?>/PosteController/index" class="col-1 text-decoration-none text-end text-light">Accueil</a>
+            <p class="col-1 text-light text-end pt-2 mt-2">Fouad Laroui</p>
+            <a href="<?php echo URLROOT; ?>/BloggerController/logout" class="col-1 text-decoration-none text-light text-end">Déconnecter</a>
+            <form action="<?php echo URLROOT; ?>/BloggerController/search" method="POST" class="col-3">
                 <input type="text" name="search" id="search" placeholder="Recherche" style="border-radius:5px; padding-left:1rem; outline:none;">
-                <input type="submit" name="submit_search" value="Recherche" class="bg-light text-dark text-center" style="border-radius:5px; outline:none;">
+                <input type="submit" value="Recherche" class="bg-light text-dark text-center" style="border-radius:5px; outline:none;">
             </form>
+            <!-- <h4 class="col-sm-1"></h4> -->
         </div>
         <div class="container">
             <div class="paragraphe row">
                 <p class="col-6" style="position: absolute; top: 50%; left:10%; font-size:3rem; text-transform: uppercase; font-family:'Courier New', Courier, monospace; color: #EDE3A1;
 	            background-image: -webkit-linear-gradient(180deg, #EDE3A1, #E7E3CE);
 	            -webkit-background-clip: text;
-	            -webkit-text-fill-color: transparent;">bienvenue chers lecteurs</p>
+	            -webkit-text-fill-color: transparent;">bienvenue cher écrivain</p>
             </div>
         </div>
     </div>
 </header>
-

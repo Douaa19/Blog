@@ -16,18 +16,22 @@ class Blogger {
         if (!$result) {
             return false;
         } else {
-            return true;
+            return $result;
         }
         
     }
 
-    // Session
-    public function creatSession($blogger) {
-        $_SESSION['id_blogger'] = $blogger->id;
-        $_SESSION['nom_blogger'] = $blogger->nom;
-        $_SESSION['email_blogger'] = $blogger->email;
-        $_SESSION['mdp_blogger'] = $blogger->mdp;
+
+    public function search($data) {
+        $this->database->query('SELECT * FROM postes WHERE titre_poste = :titre ');
+        $this->database->bind(':titre', $data['search']);
+
+        $result = $this->database->resultSet();
+
+        if (!$result) {
+            return false;
+        } else {
+            return $result;
+        }
     }
-
-
 }

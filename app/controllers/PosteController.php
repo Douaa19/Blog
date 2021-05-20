@@ -9,14 +9,19 @@ class PosteController extends Controller {
     public function index(){
         $postes = $this->posteModel->getPoste();
 
-        $this->view('blogger/index', $postes);
+        $this->view('blogger/accueilBlogger', $postes);
     }
 
 
     // Retourner à la page d'ajoute
-    public function return() {
-      $this->view('blogger/add');
-    }
+    // public function return() {
+    //   if (isset($_POST['ajouter'])) {
+    //     echo "Ajouter isset";
+    //   } else {
+    //     echo "Ajouter not isset";
+    //   }
+    //   // $this->view('blogger/add');
+    // }
 
 
     // Ajouter un poste
@@ -29,11 +34,11 @@ class PosteController extends Controller {
           'titre' => $_POST['titre'],
           'contenu' => $_POST['contenu']
         ];
-        if (!empty($data['titre']) && $data['contenu']) {
+        
+        if (!empty($data['titre']) && !empty($data['contenu'])) {
 
           $this->posteModel->addPoste($data);
-          // $this->view('blogger/accueil');
-          header('location:' . URLROOT . '/' . 'PosteController/accueilBlogger');
+          header('location:' . URLROOT . '/' . 'PosteController/index');
 
         } else {
           $this->view('blogger/add');
@@ -56,7 +61,7 @@ class PosteController extends Controller {
 
         $this->posteModel->updatePoste($data);
         // $this->view('blogger/accueil');
-        header('location:' . URLROOT . '/' . 'PosteController/accueilBlogger');
+        header('location:' . URLROOT . '/' . 'PosteController/index');
       }
     }
 
@@ -77,7 +82,7 @@ class PosteController extends Controller {
         'id' => $_GET['id']
       ];
       $this->posteModel->deletePoste($data);
-      header('location:' . URLROOT . '/' . 'PosteController/accueilBlogger');
+      header('location:' . URLROOT . '/' . 'PosteController/index');
       // $this->view('blogger/accueil');
     }
 

@@ -17,6 +17,7 @@
         <div class="m-auto p-2 row" style="background-color:black;">
             <h4 class="col-sm-1"></h4>
             <h4 class="text-light col-sm-8 text-start" >Logo</h4>
+            <a href="<?php echo URLROOT ?>/VisiteurController/index" class="col-1 text-decoration-none text-end text-light">Accueil</a>
             <h4 class="col-sm-1"></h4>
         </div>
     </div>

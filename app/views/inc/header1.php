@@ -19,6 +19,7 @@
             <h4 class="text-light col-sm-8 text-start" >Logo</h4>
             <a href="" class="col-1 text-decoration-none text-center pt-1 text-light">Accueil</a>
             <p class="col-1 text-light text-center pt-1">Fouad Laroui</p>
+            <a href="<?php echo URLROOT; ?>/BloggerController/logout" class="col-1 text-decoration-none text-light text-end">Déconnecter</a>
             <h4 class="col-sm-1"></h4>
         </div>
     </div>
