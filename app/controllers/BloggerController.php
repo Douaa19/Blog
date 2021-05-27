@@ -77,7 +77,10 @@ class BloggerController extends Controller {
             if ($result) {
                 $this->view('blogger/result', $result);
             }else {
-                echo "La partie cherché n'exixte pas";
+                $data = [
+                    'error_search' => "Le resultat ne trouve pas"
+                ];
+                $this->view('blogger/accueilBlogger', [], $data);
             }
         }
     }

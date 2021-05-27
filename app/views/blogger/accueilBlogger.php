@@ -6,11 +6,15 @@
         Après des études au Lycée Lyautey à Casablanca, il passe par l'Ecole Nationale des Ponts et Chaussées en France, dont il sort ingénieur. Après avoir travaillé dans une usine de phosphates à Khouribga (Maroc), Il retourne en France et obtient un doctorat en sciences économiques. Il part         pour le Royaume-Uni, où il passe quelques années à Cambridge et à York et part vivre à Amsterdam où il enseigne l'économétrie puis les sciences de      l'environnement à l'Université. Parallèlement, il se consacre à l'écriture.
         Ses romans écrits en français connaissent un grand succès au Maroc pour sa façon de se moquer des blocages et aussi des pesanteurs de la société marocaine. Il le fait avec humour et sans discours politique trop explicite."J’écris pour dénoncer des situations qui me choquent. Pour dénicher        la bêtise sous toutes ses formes. La méchanceté, la cruauté, le fanatisme, la sottise me révulsent". Identité, tolérance, respect de l’individu :           ce sont les trois valeurs qui l’intéressent parce que pour lui, « elles sont malmenées ou mal comprises dans nos pays du Maghreb et peut-être          aussi ailleurs en Afrique et dans les pays arabe ». Poète, il a composé en néerlandais un recueil qu'il juge "trop intime" pour être traduit en     français.</p>
     </div>
-    <div class="row mt-5">
+    <div class="article row mt-5">
       <h2 class="col-10">Articles</h2>
       <a href="<?php echo URLROOT; ?>/PosteController/add" class="col-2"><button type="button" name="ajouter" class="btn btn-outline-primary">Ajouter <i class='fas fa-plus'></i></button></a>
     </div>
-    <div class="row">
+    <div class="error row">
+      <div class=""><?php if (isset($data1['error_search'])) {
+        echo $data1['error_search'];
+      } ?>
+      </div>
       <?php $var=0; ?>
       <?php foreach ($data as $row) : ?>
         <div class="card text-center shadow m-3 p-3 rounded" style="width: 25rem;">

@@ -8,7 +8,11 @@
 
             Ses romans écrits en français connaissent un grand succès au Maroc pour sa façon de se moquer des blocages et aussi des pesanteurs de la société            marocaine. Il le fait avec humour et sans discours politique trop explicite."J’écris pour dénoncer des situations qui me choquent. Pour dénicher        la bêtise sous toutes ses formes. La méchanceté, la cruauté, le fanatisme, la sottise me révulsent". Identité, tolérance, respect de l’individu :           ce sont les trois valeurs qui l’intéressent parce que pour lui, « elles sont malmenées ou mal comprises dans nos pays du Maghreb et peut-être          aussi ailleurs en Afrique et dans les pays arabe ». Poète, il a composé en néerlandais un recueil qu'il juge "trop intime" pour être traduit en     français.</p>
         </div>
-        <h2 class="mt-5">Articles</h2>
+        <h2 class="article mt-5">Articles</h2>
+        <div class="error" style="padding: 1rem 0 0 0; color: black; font-size: 18px; font-weight: bolder; margin-bottom:1rem;"><?php if (isset($data1['error_search'])) {
+          echo $data1['error_search'];
+          } ?>
+        </div>
         <div class="row">
           <?php foreach ($data as $row) : ?>
             <div class="card col-4 shadow p-3 mb-5 rounded" style="width: 25rem;">

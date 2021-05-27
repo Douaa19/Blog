@@ -30,7 +30,10 @@ class VisiteurController extends Controller {
                 if ($result) {
                     $this->view('visiteur/index', $result);
                 }else {
-                header('Location:' . URLROOT . '/' . 'VisiteurController/index');
+                    $data = [
+                        'error_search' => "Le resultat ne trouve pas"
+                    ];
+                    $this->view('visiteur/result', [], $data);
                 }
             } else {
                 header('Location:' . URLROOT . '/' . 'VisiteurController/index');
