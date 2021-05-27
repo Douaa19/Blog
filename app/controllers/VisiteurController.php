@@ -20,20 +20,21 @@ class VisiteurController extends Controller {
 
     public function search() {
         if (isset($_POST['submit_search'])) {
-            $data = [
-                'search' => $_POST['search']
-            ];
-
-            $result = $this->visiteurModel->search($data);
-
-            if ($result) {
-                $this->view('visiteur/result', $result);
-            }else {
-                // header('Location: ' . URLROOT . '/' . 'VisiteurController/index');
-                echo "Not found";
+            if (!empty($_POST['search'])) {
+                $data = [
+                    'search' => $_POST['search']
+                ];
+    
+                $result = $this->visiteurModel->search($data);
+    
+                if ($result) {
+                    $this->view('visiteur/index', $result);
+                }else {
+                header('Location:' . URLROOT . '/' . 'VisiteurController/index');
+                }
+            } else {
+                header('Location:' . URLROOT . '/' . 'VisiteurController/index');
             }
-
-            
         }
     }
 }

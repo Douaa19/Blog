@@ -10,18 +10,19 @@
         </div>
         <h2 class="mt-5">Articles</h2>
         <div class="row">
+          <?php $var=0; ?>
           <?php foreach ($data as $row) : ?>
             <div class="card text-start shadow m-3 p-3 rounded" style="width: 25rem;">
                 <img src="../public/img/livre.gif" class="card-img-top mt-2" alt="Une année chez les français" style="height:28rem;">
                 <div class="card-body row">
                     <h5 class="card-title col-6 text-start"><?php echo $row->titre_poste; ?></h5>
-                    <p class="card-text col-10"><?php echo "LIMIT 15"; ?></p>
+                    <p class="card-text col-10"><?php  ?></p>
                     <p class="col-3"></p>
-                    <button type="button" class="btn btn-dark col-6" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button type="button" class="btn btn-dark col-6" data-bs-toggle="modal" data-bs-target="<?php echo '#h' . $var; ?>">
                   Lire plus
                     </button>
 
-                    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"   aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade " id="<?php echo 'h'.$var; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"   aria-labelledby="staticBackdropLabel" aria-hidden="true">
                      <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -37,6 +38,7 @@
                     <p class="col-3"></p>
                 </div>
             </div>
+            <?php $var++; ?>
           <?php endforeach; ?>
         </div>
 </main>

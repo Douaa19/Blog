@@ -12,39 +12,45 @@ class BloggerController extends Controller {
         ];
 
         $this->view('blogger/login');
-
-        // $blogger = $this->bloggerModel->getBlogger($data);
-
-        // $this->view('blogger/login', $blogger);
     }
 
-
+// Login admin
     public function login() {
 
         if (isset($_POST['submit-login'])) {
-            if (!empty($_POST['email']) && !empty($_POST['mdp'])) {
+
+            $data = [
+                'email' => trim($_POST['email']),
+                'mdp' => trim($_POST['mdp'])
+            ];
+
+            if (empty($_POST['email'])) {
                 $data = [
-                    'email' => trim($_POST['email']),
-                    'mdp' => trim($_POST['mdp'])
+                    'error_email' => "S'il vous plaît écrire vos email"
                 ];
-                $logged = $this->bloggerModel->login($data);
-                if (!$logged) {
-                    $this->view('blogger/login');
-                } else {
-                    $this->creatSession($logged);
-                    header('Location:' . URLROOT . '/' . 'PosteController/index');
-                }
-            } else {
-                // Inputs are empty
-                $this->view('blogger/login');
+            } 
+
+            if (empty($_POST['mdp'])) {
+                $data = [
+                    'error_mdp' => "S'il vous plaît écrire vos mot de passe"
+                ];
             }
+
+            $logged = $this->bloggerModel->login($data);
+            if (!$logged) {
+                $this->view('blogger/login');
+            } else {
+                $this->creatSession($logged);
+                header('Location:' . URLROOT . '/' . 'PosteController/index');
+            }
+
         } else {
                 $this->view('blogger/login');
         }
     }
 
 
-    // Session
+    // Creat Session
     public function creatSession($blogger) {
         session_start();
         $_SESSION['id'] = $blogger->id_blogger;
@@ -53,14 +59,14 @@ class BloggerController extends Controller {
         $_SESSION['mdp'] = $blogger->mdp_blogger;
     }
 
-
+    // Logout
     public function logout(){
         session_start();
         unset($_SESSION['nom']);
         header('Location: ' . URLROOT . '/' . 'VisiteurController/index');
-      }
+    }
 
-
+    // Search Bar
     public function search() {
         if (isset($_POST['search'])) {
             $data = [
@@ -75,6 +81,8 @@ class BloggerController extends Controller {
             }
         }
     }
+
+
 
 }
 
