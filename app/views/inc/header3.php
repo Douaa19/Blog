@@ -32,10 +32,10 @@
         </div>
         <div class="container">
             <div class="paragraphe row">
-                <p class="col-6" style="position: absolute; top: 50%; left:10%; font-size:3rem; text-transform: uppercase; font-family:'Courier New', Courier, monospace; color: #EDE3A1;
+                <p class="col-7" style="position: absolute; top: 50%; left:10%; font-size:3rem; text-transform: uppercase; font-family:'Courier New', Courier, monospace; color: #EDE3A1;
 	            background-image: -webkit-linear-gradient(180deg, #EDE3A1, #E7E3CE);
 	            -webkit-background-clip: text;
-	            -webkit-text-fill-color: transparent;">bienvenue cher écrivain</p>
+	            -webkit-text-fill-color: transparent;">bienvenue cher <?php echo $_SESSION['nom']; ?></p>
             </div>
         </div>
     </div>

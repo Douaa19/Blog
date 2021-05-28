@@ -19,31 +19,32 @@ class BloggerController extends Controller {
 
         if (isset($_POST['submit-login'])) {
 
-            $data = [
+            if (!empty($_POST['email']) && !empty($_POST['mdp'])) {
+                $data = [
                 'email' => trim($_POST['email']),
                 'mdp' => trim($_POST['mdp'])
-            ];
-
-            if (empty($_POST['email'])) {
-                $data = [
-                    'error_email' => "S'il vous plaît écrire vos email"
                 ];
-            } 
 
-            if (empty($_POST['mdp'])) {
-                $data = [
-                    'error_mdp' => "S'il vous plaît écrire vos mot de passe"
-                ];
-            }
-
-            $logged = $this->bloggerModel->login($data);
-            if (!$logged) {
-                $this->view('blogger/login');
             } else {
-                $this->creatSession($logged);
-                header('Location:' . URLROOT . '/' . 'PosteController/index');
+                    $errors = [
+                        'error_email' => "S'il vous plaît remplir le champ email",
+                        'error_mdp' => "S'il vous plaît remplir le champ mot de passe"
+                    ];
+                    $this->view('blogger/login', [], $errors);
             }
 
+            if (isset($data)) {
+                $logged = $this->bloggerModel->login($data);
+                if (!$logged) {
+                    $this->view('blogger/login');
+                } else {
+                    $this->creatSession($logged);
+                    header('Location:' . URLROOT . '/' . 'PosteController/index');
+                }
+            } else {
+                // $this->view('blogger/login', [], $errors);
+            }
+            
         } else {
                 $this->view('blogger/login');
         }

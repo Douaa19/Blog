@@ -21,13 +21,14 @@ header .header .navbar a:hover{
 /* Input style */
 
 header .header .navbar form input[type="text"] {
-    border: none;
+    border-bottom: none;
     border-radius: 10px; 
     padding:0.2rem 0 0.4rem 0.8rem; 
     outline: none;
     background-color: black;
     color:white;
 }
+
 
 /*  */
 
@@ -54,14 +55,3 @@ header .header .container .paragraphe p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-.container .article  {
-    padding-bottom: 1rem;
-}
-
-.container .error {
-    padding: 1rem 0 0 0;
-    color: black;
-    font-size: 18px;
-    font-weight: bolder;
-}
