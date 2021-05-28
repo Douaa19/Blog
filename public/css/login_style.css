@@ -1,31 +1,44 @@
-.container .container-fluid{
+
+
+.container .container-fluid .image{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 5rem;
+  grid-row-gap: 0px;
   display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 header .header .m-auto a{
     text-decoration: none;
+    padding: 1rem 0rem;
+}
+
+header .header .m-auto h4 {
+  padding: 1rem 0rem;
 }
 
 header .header .m-auto a:hover{
     text-decoration: underline white;
 }
 
-.container-fluid .form {
+.container .container-fluid .image .form {
     background-color:black; 
-    /* flex-direction:column; 
-    justify-content: center;  */
+    display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
     width: 500px;
-    height: 600px;
+    height: 580px;
+    padding: 0 2rem;
 }
 
 .container-fluid .image img{
   width: 500px;
-  height: 600px;
+  height: 580px;
 }
 
 .container-fluid .form h2 {
@@ -34,6 +47,8 @@ header .header .m-auto a:hover{
     -webkit-text-fill-color: transparent;
     text-align:center;
     font-size:36px;
+    padding: 0 10rem 0 10rem;
+    margin-bottom: 3rem;
 }
 
 /* Animation login button */

@@ -54,3 +54,14 @@ header .header .container .paragraphe p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+.container .article  {
+    padding-bottom: 1rem;
+}
+
+.container .error {
+    padding: 1rem 0 0 0;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+}
