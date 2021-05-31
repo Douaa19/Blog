@@ -21,12 +21,11 @@
         <div class="navbar m-auto p-2 row" style="background-color:black;">
             <h4 class="col-sm-1"></h4>
             <h4 class="text-light col-sm-5 text-start" >Logo</h4>
-            <a href="<?php echo URLROOT ?>/PosteController/index" class="col-1 text-decoration-none text-end text-light">Accueil</a>
-            <p class="col-1 text-light text-end pt-2 mt-2"><?php echo $_SESSION['nom']; ?> </p>
-            <a href="<?php echo URLROOT; ?>/BloggerController/logout" class="col-1 text-decoration-none text-light text-end">Déconnecter</a>
+            <a href="<?php echo URLROOT ?>/PosteController/index" class="a col-1 text-end text-light" style="text-decoration:none;">Accueil</a>
+            <a href="<?php echo URLROOT; ?>/BloggerController/logout" class="a col-1 text-light text-end" style="text-decoration:none;">Déconnecter</a>
             <form action="<?php echo URLROOT; ?>/BloggerController/search" method="POST" class="col-3">
                 <input type="text" name="search" id="search" placeholder="Recherche" style="border-radius:5px; padding-left:1rem; outline:none;">
-                <input type="submit" value="Recherche" class="bg-light text-dark text-center" style="border-radius:5px; outline:none;">
+                <button type="submit" name="submit_search" class="btn"><i class="fas fa-search"></i></button>
             </form>
             <!-- <h4 class="col-sm-1"></h4> -->
         </div>

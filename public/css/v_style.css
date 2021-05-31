@@ -14,8 +14,22 @@ header .header .navbar a{
     text-decoration: none;
 }
 
-header .header .navbar a:hover{
-    text-decoration: underline white;
+header .header .navbar a::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+header .header .navbar a:hover::after{
+    width: 100%; 
+    left: 0;
 }
 
 /* Input style */
@@ -33,14 +47,13 @@ header .header .navbar form input[type="text"] {
 /*  */
 
 header .header .navbar form .btn {
-    color:rgb(0, 0, 0);
-    background-color: rgb(230, 230, 230);
+    color: whitesmoke;
+    background-color: black;
     padding-bottom: 0.3rem;
 }
 
 header .header .navbar form .btn:hover {
-    color: whitesmoke;
-    background-color: black;
+    cursor: pointer;
 }
 
 header .header .container .paragraphe p {
