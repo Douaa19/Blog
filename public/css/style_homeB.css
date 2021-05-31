@@ -8,3 +8,44 @@
     font-size: 18px;
     font-weight: bolder;
 }
+
+header .header .navbar a .a::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+header .header .navbar a .a:hover:after {
+    width: 100%; 
+    left: 0;
+}
+
+header .header .navbar form input[type="text"] {
+    border-bottom: none;
+    border-radius: 10px; 
+    padding:0.2rem 0 0.4rem 0.8rem; 
+    outline: none;
+    background-color: black;
+    color:white;
+}
+
+/* Style button */
+
+header .header .navbar form .btn {
+    color: whitesmoke;
+    background-color: black;
+    padding-bottom: 0.3rem;
+}
+
+header .header .navbar form .btn:hover {
+    cursor: pointer;
+}
+
+
